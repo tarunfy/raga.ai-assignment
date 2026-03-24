@@ -1,0 +1,134 @@
+{
+  "metrics": [
+    {
+      "id": "active-patients",
+      "label": "Active patients",
+      "value": 184,
+      "change": 12.4,
+      "trend": "up",
+      "detail": "compared with last week"
+    },
+    {
+      "id": "critical-alerts",
+      "label": "Critical alerts",
+      "value": 9,
+      "change": 4.8,
+      "trend": "down",
+      "detail": "lower than yesterday"
+    },
+    {
+      "id": "appointments-today",
+      "label": "Appointments today",
+      "value": 126,
+      "change": 7.2,
+      "trend": "up",
+      "detail": "across all departments"
+    },
+    {
+      "id": "care-team-utilization",
+      "label": "Team utilization",
+      "value": 87,
+      "change": 2.1,
+      "trend": "up",
+      "detail": "staffed hours in use"
+    }
+  ],
+  "careTrend": [
+    {
+      "day": "Mon",
+      "admissions": 22,
+      "discharges": 16,
+      "critical": 4
+    },
+    {
+      "day": "Tue",
+      "admissions": 26,
+      "discharges": 17,
+      "critical": 3
+    },
+    {
+      "day": "Wed",
+      "admissions": 25,
+      "discharges": 18,
+      "critical": 5
+    },
+    {
+      "day": "Thu",
+      "admissions": 28,
+      "discharges": 21,
+      "critical": 4
+    },
+    {
+      "day": "Fri",
+      "admissions": 31,
+      "discharges": 22,
+      "critical": 6
+    },
+    {
+      "day": "Sat",
+      "admissions": 24,
+      "discharges": 18,
+      "critical": 5
+    },
+    {
+      "day": "Sun",
+      "admissions": 20,
+      "discharges": 17,
+      "critical": 3
+    }
+  ],
+  "departmentLoad": [
+    {
+      "department": "Cardiology",
+      "occupancy": 82,
+      "capacity": 90
+    },
+    {
+      "department": "Orthopedics",
+      "occupancy": 67,
+      "capacity": 80
+    },
+    {
+      "department": "Neurology",
+      "occupancy": 74,
+      "capacity": 86
+    },
+    {
+      "department": "ICU",
+      "occupancy": 91,
+      "capacity": 96
+    }
+  ],
+  "recentAssignments": [
+    {
+      "id": "assignment-1",
+      "patientId": "pt-1001",
+      "patientName": "Amara Patel",
+      "program": "Cardiac monitoring",
+      "priority": "critical",
+      "summary": "Elevated overnight blood pressure requires a cardiology review before noon.",
+      "assignedTo": "Dr. Mason Lee",
+      "updatedAt": "2026-03-24T07:10:00.000Z"
+    },
+    {
+      "id": "assignment-2",
+      "patientId": "pt-1004",
+      "patientName": "James Carter",
+      "program": "Respiratory follow-up",
+      "priority": "monitoring",
+      "summary": "Oxygen saturation stabilized after therapy. Continue pulse checks every four hours.",
+      "assignedTo": "Nurse Olivia Grant",
+      "updatedAt": "2026-03-24T08:05:00.000Z"
+    },
+    {
+      "id": "assignment-3",
+      "patientId": "pt-1007",
+      "patientName": "Lucia Moreno",
+      "program": "Neurology observation",
+      "priority": "high",
+      "summary": "MRI review uploaded. Neurology team requested a treatment-plan alignment note.",
+      "assignedTo": "Dr. Aaron Brooks",
+      "updatedAt": "2026-03-24T09:20:00.000Z"
+    }
+  ]
+}

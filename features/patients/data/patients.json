@@ -1,0 +1,415 @@
+[
+  {
+    "id": "pt-1001",
+    "fullName": "Amara Patel",
+    "age": 52,
+    "gender": "Female",
+    "primaryCondition": "Hypertension",
+    "careProgram": "Cardiac monitoring",
+    "status": "active",
+    "riskLevel": "critical",
+    "assignedDoctor": "Dr. Mason Lee",
+    "room": "ICU-12",
+    "admissionDate": "2026-03-18T08:15:00.000Z",
+    "lastUpdated": "2026-03-24T07:10:00.000Z",
+    "email": "amara.patel@example.com",
+    "phone": "(555) 014-8801",
+    "location": "North Wing, Floor 3",
+    "summary": "Blood pressure spiked during overnight monitoring. Labs and medication adjustments are pending physician review.",
+    "vitals": {
+      "bloodPressure": "158/96",
+      "heartRate": 96,
+      "oxygenSaturation": 95,
+      "temperature": 99.1
+    },
+    "medications": [
+      {
+        "name": "Losartan",
+        "dosage": "50 mg",
+        "schedule": "Twice daily"
+      },
+      {
+        "name": "Aspirin",
+        "dosage": "81 mg",
+        "schedule": "Once daily"
+      }
+    ],
+    "careNotes": [
+      {
+        "id": "note-1001-1",
+        "author": "Nurse Olivia Grant",
+        "recordedAt": "2026-03-24T06:45:00.000Z",
+        "content": "Escalated elevated blood pressure trend to cardiology team."
+      },
+      {
+        "id": "note-1001-2",
+        "author": "Dr. Mason Lee",
+        "recordedAt": "2026-03-23T17:20:00.000Z",
+        "content": "Requested morning lab panel and adjusted antihypertensive timing."
+      }
+    ],
+    "visitTimeline": [
+      {
+        "id": "visit-1001-1",
+        "title": "Admitted to ICU observation",
+        "description": "Transferred for continuous monitoring following an emergency hypertension episode.",
+        "date": "2026-03-18T08:15:00.000Z"
+      },
+      {
+        "id": "visit-1001-2",
+        "title": "Medication review",
+        "description": "Cardiology adjusted antihypertensive regimen after evening round.",
+        "date": "2026-03-22T18:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "pt-1002",
+    "fullName": "Noah Bennett",
+    "age": 38,
+    "gender": "Male",
+    "primaryCondition": "Post-operative recovery",
+    "careProgram": "Orthopedic rehab",
+    "status": "stable",
+    "riskLevel": "moderate",
+    "assignedDoctor": "Dr. Priya Shah",
+    "room": "ORTHO-07",
+    "admissionDate": "2026-03-20T10:20:00.000Z",
+    "lastUpdated": "2026-03-24T08:40:00.000Z",
+    "email": "noah.bennett@example.com",
+    "phone": "(555) 014-8802",
+    "location": "South Wing, Floor 2",
+    "summary": "Recovering well after knee replacement surgery with steady mobility improvements.",
+    "vitals": {
+      "bloodPressure": "124/82",
+      "heartRate": 74,
+      "oxygenSaturation": 99,
+      "temperature": 98.4
+    },
+    "medications": [
+      {
+        "name": "Ibuprofen",
+        "dosage": "400 mg",
+        "schedule": "Every 8 hours"
+      },
+      {
+        "name": "Enoxaparin",
+        "dosage": "40 mg",
+        "schedule": "Once daily"
+      }
+    ],
+    "careNotes": [
+      {
+        "id": "note-1002-1",
+        "author": "Physical Therapy Team",
+        "recordedAt": "2026-03-24T08:00:00.000Z",
+        "content": "Completed two assisted hallway walks with improved gait stability."
+      }
+    ],
+    "visitTimeline": [
+      {
+        "id": "visit-1002-1",
+        "title": "Surgery completed",
+        "description": "Post-op monitoring initiated and pain management plan activated.",
+        "date": "2026-03-20T14:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "pt-1003",
+    "fullName": "Elena Vasquez",
+    "age": 44,
+    "gender": "Female",
+    "primaryCondition": "Asthma exacerbation",
+    "careProgram": "Respiratory follow-up",
+    "status": "monitoring",
+    "riskLevel": "high",
+    "assignedDoctor": "Dr. Hannah Cole",
+    "room": "RESP-04",
+    "admissionDate": "2026-03-21T07:30:00.000Z",
+    "lastUpdated": "2026-03-24T09:00:00.000Z",
+    "email": "elena.vasquez@example.com",
+    "phone": "(555) 014-8803",
+    "location": "East Wing, Floor 1",
+    "summary": "Requires periodic oxygen checks and inhaler adherence review after acute shortness-of-breath event.",
+    "vitals": {
+      "bloodPressure": "130/85",
+      "heartRate": 88,
+      "oxygenSaturation": 93,
+      "temperature": 98.8
+    },
+    "medications": [
+      {
+        "name": "Albuterol",
+        "dosage": "2 puffs",
+        "schedule": "Every 6 hours as needed"
+      },
+      {
+        "name": "Prednisone",
+        "dosage": "20 mg",
+        "schedule": "Once daily"
+      }
+    ],
+    "careNotes": [
+      {
+        "id": "note-1003-1",
+        "author": "Respiratory Therapist",
+        "recordedAt": "2026-03-24T08:25:00.000Z",
+        "content": "Patient tolerated morning breathing treatment well with improved lung sounds."
+      }
+    ],
+    "visitTimeline": [
+      {
+        "id": "visit-1003-1",
+        "title": "Pulmonary consult",
+        "description": "Pulmonology recommended taper plan and follow-up imaging.",
+        "date": "2026-03-22T11:15:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "pt-1004",
+    "fullName": "James Carter",
+    "age": 61,
+    "gender": "Male",
+    "primaryCondition": "COPD management",
+    "careProgram": "Respiratory follow-up",
+    "status": "monitoring",
+    "riskLevel": "moderate",
+    "assignedDoctor": "Dr. Hannah Cole",
+    "room": "RESP-09",
+    "admissionDate": "2026-03-19T12:10:00.000Z",
+    "lastUpdated": "2026-03-24T08:05:00.000Z",
+    "email": "james.carter@example.com",
+    "phone": "(555) 014-8804",
+    "location": "East Wing, Floor 1",
+    "summary": "Oxygen saturation has stabilized, but therapy compliance remains under observation.",
+    "vitals": {
+      "bloodPressure": "126/80",
+      "heartRate": 79,
+      "oxygenSaturation": 96,
+      "temperature": 98.1
+    },
+    "medications": [
+      {
+        "name": "Tiotropium",
+        "dosage": "18 mcg",
+        "schedule": "Once daily"
+      }
+    ],
+    "careNotes": [
+      {
+        "id": "note-1004-1",
+        "author": "Nurse Olivia Grant",
+        "recordedAt": "2026-03-24T07:55:00.000Z",
+        "content": "Patient requested discharge timing update; awaiting respiratory clearance."
+      }
+    ],
+    "visitTimeline": [
+      {
+        "id": "visit-1004-1",
+        "title": "Therapy resumed",
+        "description": "Breathing exercise schedule reintroduced after overnight stability.",
+        "date": "2026-03-23T09:50:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "pt-1005",
+    "fullName": "Sophia Nguyen",
+    "age": 29,
+    "gender": "Female",
+    "primaryCondition": "Migraine observation",
+    "careProgram": "Neurology observation",
+    "status": "stable",
+    "riskLevel": "moderate",
+    "assignedDoctor": "Dr. Aaron Brooks",
+    "room": "NEURO-03",
+    "admissionDate": "2026-03-22T09:05:00.000Z",
+    "lastUpdated": "2026-03-24T10:20:00.000Z",
+    "email": "sophia.nguyen@example.com",
+    "phone": "(555) 014-8805",
+    "location": "West Wing, Floor 4",
+    "summary": "Symptoms improved after observation and hydration therapy. Monitoring for recurrence before discharge.",
+    "vitals": {
+      "bloodPressure": "118/76",
+      "heartRate": 72,
+      "oxygenSaturation": 99,
+      "temperature": 98.3
+    },
+    "medications": [
+      {
+        "name": "Sumatriptan",
+        "dosage": "50 mg",
+        "schedule": "As needed"
+      }
+    ],
+    "careNotes": [
+      {
+        "id": "note-1005-1",
+        "author": "Dr. Aaron Brooks",
+        "recordedAt": "2026-03-24T09:40:00.000Z",
+        "content": "No recurrent neurological symptoms overnight. Continue observation until afternoon."
+      }
+    ],
+    "visitTimeline": [
+      {
+        "id": "visit-1005-1",
+        "title": "Neurology assessment",
+        "description": "No focal deficits identified. Hydration and rest plan continued.",
+        "date": "2026-03-23T14:30:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "pt-1006",
+    "fullName": "Mason Walker",
+    "age": 47,
+    "gender": "Male",
+    "primaryCondition": "Diabetes regulation",
+    "careProgram": "Endocrine stabilization",
+    "status": "active",
+    "riskLevel": "high",
+    "assignedDoctor": "Dr. Keira Sloan",
+    "room": "ENDO-11",
+    "admissionDate": "2026-03-17T15:40:00.000Z",
+    "lastUpdated": "2026-03-24T06:50:00.000Z",
+    "email": "mason.walker@example.com",
+    "phone": "(555) 014-8806",
+    "location": "Central Wing, Floor 2",
+    "summary": "Blood glucose variability remains elevated. Nutrition, insulin timing, and discharge education need alignment.",
+    "vitals": {
+      "bloodPressure": "136/86",
+      "heartRate": 83,
+      "oxygenSaturation": 98,
+      "temperature": 98.9
+    },
+    "medications": [
+      {
+        "name": "Insulin glargine",
+        "dosage": "18 units",
+        "schedule": "Every evening"
+      },
+      {
+        "name": "Metformin",
+        "dosage": "500 mg",
+        "schedule": "Twice daily"
+      }
+    ],
+    "careNotes": [
+      {
+        "id": "note-1006-1",
+        "author": "Dietitian Team",
+        "recordedAt": "2026-03-24T06:20:00.000Z",
+        "content": "Reviewed meal timing adjustments with patient to support glucose stability."
+      }
+    ],
+    "visitTimeline": [
+      {
+        "id": "visit-1006-1",
+        "title": "Insulin titration",
+        "description": "Dosage updated after overnight glucose variability review.",
+        "date": "2026-03-23T20:15:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "pt-1007",
+    "fullName": "Lucia Moreno",
+    "age": 57,
+    "gender": "Female",
+    "primaryCondition": "Seizure follow-up",
+    "careProgram": "Neurology observation",
+    "status": "active",
+    "riskLevel": "high",
+    "assignedDoctor": "Dr. Aaron Brooks",
+    "room": "NEURO-08",
+    "admissionDate": "2026-03-20T06:55:00.000Z",
+    "lastUpdated": "2026-03-24T09:20:00.000Z",
+    "email": "lucia.moreno@example.com",
+    "phone": "(555) 014-8807",
+    "location": "West Wing, Floor 4",
+    "summary": "Awaiting MRI review and medication-response notes before finalizing the next treatment step.",
+    "vitals": {
+      "bloodPressure": "132/84",
+      "heartRate": 76,
+      "oxygenSaturation": 97,
+      "temperature": 98.6
+    },
+    "medications": [
+      {
+        "name": "Levetiracetam",
+        "dosage": "500 mg",
+        "schedule": "Twice daily"
+      }
+    ],
+    "careNotes": [
+      {
+        "id": "note-1007-1",
+        "author": "Dr. Aaron Brooks",
+        "recordedAt": "2026-03-24T09:10:00.000Z",
+        "content": "MRI uploaded. Waiting for radiology annotations before treatment meeting."
+      }
+    ],
+    "visitTimeline": [
+      {
+        "id": "visit-1007-1",
+        "title": "Observation extended",
+        "description": "Care team extended monitoring pending imaging review.",
+        "date": "2026-03-23T16:40:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "pt-1008",
+    "fullName": "Ethan Reed",
+    "age": 66,
+    "gender": "Male",
+    "primaryCondition": "Heart failure management",
+    "careProgram": "Cardiac monitoring",
+    "status": "monitoring",
+    "riskLevel": "critical",
+    "assignedDoctor": "Dr. Mason Lee",
+    "room": "CARD-05",
+    "admissionDate": "2026-03-18T11:25:00.000Z",
+    "lastUpdated": "2026-03-24T07:55:00.000Z",
+    "email": "ethan.reed@example.com",
+    "phone": "(555) 014-8808",
+    "location": "North Wing, Floor 2",
+    "summary": "Fluid retention markers improved, but daily weight checks and medication timing remain high priority.",
+    "vitals": {
+      "bloodPressure": "142/88",
+      "heartRate": 90,
+      "oxygenSaturation": 94,
+      "temperature": 98.7
+    },
+    "medications": [
+      {
+        "name": "Furosemide",
+        "dosage": "40 mg",
+        "schedule": "Once daily"
+      },
+      {
+        "name": "Carvedilol",
+        "dosage": "12.5 mg",
+        "schedule": "Twice daily"
+      }
+    ],
+    "careNotes": [
+      {
+        "id": "note-1008-1",
+        "author": "Cardiology Team",
+        "recordedAt": "2026-03-24T07:15:00.000Z",
+        "content": "Requested repeat labs and reinforced fluid restriction guidance."
+      }
+    ],
+    "visitTimeline": [
+      {
+        "id": "visit-1008-1",
+        "title": "Cardiology consult",
+        "description": "Adjusted diuretic plan after reviewing overnight fluid balance.",
+        "date": "2026-03-23T18:25:00.000Z"
+      }
+    ]
+  }
+]

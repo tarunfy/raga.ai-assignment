@@ -1,32 +1,52 @@
-import { Geist, Geist_Mono, Inter } from "next/font/google"
-
-import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
+import type { Metadata } from "next";
+import { Geist, Geist_Mono, Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
+import { AppProviders } from "@/providers/app-providers";
+import "./globals.css";
 
-const interHeading = Inter({subsets:['latin'],variable:'--font-heading'});
+const sansFont = Geist({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'})
+const headingFont = Inter({
+  subsets: ["latin"],
+  variable: "--font-heading",
+});
 
-const fontMono = Geist_Mono({
+const monoFont = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
-})
+});
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
-  return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", geist.variable, interHeading.variable)}
-    >
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
-    </html>
-  )
-}
+export const metadata: Metadata = {
+  title: {
+    default: "AegisCare",
+    template: "%s | AegisCare",
+  },
+  description:
+    "A healthcare SaaS dashboard built for secure patient operations, analytics, and care coordination.",
+};
+
+type RootLayoutProps = Readonly<{
+  children: React.ReactNode;
+}>;
+
+const RootLayout = ({ children }: RootLayoutProps) => (
+  <html
+    className={cn(
+      "font-sans antialiased",
+      sansFont.variable,
+      headingFont.variable,
+      monoFont.variable
+    )}
+    lang="en"
+    suppressHydrationWarning
+  >
+    <body className="bg-background text-foreground">
+      <AppProviders>{children}</AppProviders>
+    </body>
+  </html>
+);
+
+export default RootLayout;

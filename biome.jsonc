@@ -1,0 +1,26 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "extends": ["ultracite/core", "ultracite/next", "ultracite/react"],
+  "linter": {
+    "rules": {
+      "complexity": {
+        "noExcessiveCognitiveComplexity": "off"
+      },
+      "style": {
+        "noNonNullAssertion": "off"
+      },
+      "suspicious": {
+        "noNonNullAssertedOptionalChain": "off"
+      }
+    }
+  },
+  "files": {
+    "includes": [
+      "**/*",
+      "!node_modules",
+      "!.next",
+      "!public/*.svg",
+      "!app/favicon.ico"
+    ]
+  }
+}

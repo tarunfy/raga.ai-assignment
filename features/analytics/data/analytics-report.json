@@ -1,0 +1,117 @@
+{
+  "summary": [
+    {
+      "id": "avg-stay",
+      "label": "Average stay",
+      "value": "4.2 days",
+      "trend": "8% faster than last month"
+    },
+    {
+      "id": "readmission",
+      "label": "Readmission risk",
+      "value": "6.4%",
+      "trend": "Below quarterly benchmark"
+    },
+    {
+      "id": "care-plan",
+      "label": "Care plan compliance",
+      "value": "94%",
+      "trend": "Strong cross-team alignment"
+    }
+  ],
+  "weeklyAdmissions": [
+    {
+      "week": "W1",
+      "admissions": 41,
+      "discharges": 32
+    },
+    {
+      "week": "W2",
+      "admissions": 46,
+      "discharges": 34
+    },
+    {
+      "week": "W3",
+      "admissions": 43,
+      "discharges": 39
+    },
+    {
+      "week": "W4",
+      "admissions": 49,
+      "discharges": 42
+    },
+    {
+      "week": "W5",
+      "admissions": 52,
+      "discharges": 45
+    }
+  ],
+  "recoveryRate": [
+    {
+      "department": "Cardiology",
+      "rate": 94
+    },
+    {
+      "department": "Orthopedics",
+      "rate": 89
+    },
+    {
+      "department": "Neurology",
+      "rate": 91
+    },
+    {
+      "department": "Pulmonology",
+      "rate": 87
+    }
+  ],
+  "caseMix": [
+    {
+      "name": "Routine",
+      "value": 44
+    },
+    {
+      "name": "Complex",
+      "value": 31
+    },
+    {
+      "name": "Post-op",
+      "value": 17
+    },
+    {
+      "name": "Critical",
+      "value": 8
+    }
+  ],
+  "occupancyTrend": [
+    {
+      "month": "Oct",
+      "occupancy": 74,
+      "staffedBeds": 152
+    },
+    {
+      "month": "Nov",
+      "occupancy": 76,
+      "staffedBeds": 155
+    },
+    {
+      "month": "Dec",
+      "occupancy": 79,
+      "staffedBeds": 157
+    },
+    {
+      "month": "Jan",
+      "occupancy": 81,
+      "staffedBeds": 160
+    },
+    {
+      "month": "Feb",
+      "occupancy": 78,
+      "staffedBeds": 162
+    },
+    {
+      "month": "Mar",
+      "occupancy": 83,
+      "staffedBeds": 164
+    }
+  ]
+}
