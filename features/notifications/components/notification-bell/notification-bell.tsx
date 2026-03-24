@@ -1,15 +1,9 @@
 "use client";
 
-import {
-  BellIcon,
-  CheckCircleIcon,
-  InfoIcon,
-  WarningCircleIcon,
-} from "@phosphor-icons/react";
+import { BellIcon } from "@phosphor-icons/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
-import { Badge } from "@/components/ui/badge/badge";
 import { Button } from "@/components/ui/button/button";
 import {
   DropdownMenu,
@@ -17,95 +11,9 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu/dropdown-menu";
+import { NotificationRow } from "@/features/notifications/components/notification-row/notification-row";
 import { useNotificationCenter } from "@/features/notifications/hooks/use-notification-center";
-import type {
-  AppNotification,
-  NotificationTone,
-} from "@/features/notifications/types";
-import { cn, formatRelativeTime } from "@/lib/utils";
-
-const notificationToneLabel: Record<NotificationTone, string> = {
-  danger: "Danger",
-  normal: "Normal",
-  success: "Success",
-};
-
-/**
- * Returns the badge variant that should represent the notification tone.
- *
- * @param tone - The semantic notification tone
- */
-const getToneBadgeVariant = (tone: NotificationTone) => {
-  switch (tone) {
-    case "danger":
-      return "critical";
-    case "success":
-      return "success";
-    default:
-      return "neutral";
-  }
-};
-
-/**
- * Returns the icon used for a notification tone in the bell dropdown.
- *
- * @param tone - The semantic notification tone
- */
-const getToneIcon = (tone: NotificationTone) => {
-  switch (tone) {
-    case "danger":
-      return WarningCircleIcon;
-    case "success":
-      return CheckCircleIcon;
-    default:
-      return InfoIcon;
-  }
-};
-
-interface NotificationRowProps {
-  notification: AppNotification;
-  onOpen: (notification: AppNotification) => void;
-}
-
-const NotificationRow = ({ notification, onOpen }: NotificationRowProps) => {
-  const ToneIcon = getToneIcon(notification.tone);
-
-  return (
-    <button
-      className={cn(
-        "w-full border-border border-b px-4 py-3 text-left transition hover:bg-muted/50",
-        notification.isRead ? "" : "bg-muted/30"
-      )}
-      onClick={() => onOpen(notification)}
-      type="button"
-    >
-      <div className="flex items-start justify-between gap-3">
-        <div className="min-w-0 flex-1 space-y-2">
-          <div className="flex items-center gap-2">
-            <ToneIcon className="size-4 text-primary" />
-            <p className="truncate font-medium text-foreground text-sm">
-              {notification.title}
-            </p>
-          </div>
-          <p className="text-muted-foreground text-xs leading-5">
-            {notification.body}
-          </p>
-        </div>
-        {notification.isRead ? null : (
-          <span className="mt-1 size-2 rounded-full bg-destructive" />
-        )}
-      </div>
-      <div className="mt-3 flex items-center justify-between gap-3">
-        <Badge variant={getToneBadgeVariant(notification.tone)}>
-          {notificationToneLabel[notification.tone]}
-        </Badge>
-        <span className="text-[11px] text-muted-foreground">
-          {formatRelativeTime(notification.createdAt)}
-        </span>
-      </div>
-    </button>
-  );
-};
+import type { AppNotification } from "@/features/notifications/types";
 
 /**
  * Renders the in-app notification center trigger and dropdown list.

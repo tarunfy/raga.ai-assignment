@@ -41,3 +41,13 @@ export const analyticsReportSchema = z.object({
  * Analytics report data used by the dedicated insights page.
  */
 export type AnalyticsReport = z.infer<typeof analyticsReportSchema>;
+
+/**
+ * Single summary KPI card in the analytics overview.
+ */
+export type AnalyticsSummaryCardData = z.infer<typeof analyticsSummaryCardSchema>;
+
+/**
+ * Case-mix distribution entry used in the pie chart and legend.
+ */
+export type CaseMixPoint = z.infer<typeof caseMixPointSchema>;

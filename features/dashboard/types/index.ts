@@ -41,6 +41,21 @@ export const dashboardOverviewSchema = z.object({
 });
 
 /**
+ * Single KPI metric displayed in the dashboard header row.
+ */
+export type DashboardMetric = z.infer<typeof dashboardMetricSchema>;
+
+/**
+ * Department bed-occupancy snapshot for the capacity widget.
+ */
+export type DepartmentLoad = z.infer<typeof departmentLoadSchema>;
+
+/**
+ * Recent care-team assignment surfaced in the dashboard feed.
+ */
+export type RecentAssignment = z.infer<typeof recentAssignmentSchema>;
+
+/**
  * Dashboard overview data returned to the main operational screen.
  */
 export type DashboardOverview = z.infer<typeof dashboardOverviewSchema>;

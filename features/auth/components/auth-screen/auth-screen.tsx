@@ -12,21 +12,7 @@ import {
 } from "@/components/ui/tabs/tabs";
 import { SignInForm } from "@/features/auth/components/sign-in-form/sign-in-form";
 import { SignUpForm } from "@/features/auth/components/sign-up-form/sign-up-form";
-
-const authCopy = {
-  "sign-in": {
-    description:
-      "Use your Firebase-backed account to continue into the healthcare workspace.",
-    eyebrow: "Secure workspace access",
-    title: "Welcome back",
-  },
-  "sign-up": {
-    description:
-      "Create your account to access dashboards, analytics, and patient operations.",
-    eyebrow: "Create an account",
-    title: "Set up your workspace",
-  },
-} as const;
+import { AUTH_COPY } from "@/features/auth/constants";
 
 /**
  * Renders the combined sign-in and sign-up experience for the assignment.
@@ -36,7 +22,7 @@ export const AuthScreen = () => {
   const searchParams = useSearchParams();
   const activeTab =
     searchParams.get("tab") === "sign-up" ? "sign-up" : "sign-in";
-  const copy = authCopy[activeTab];
+  const copy = AUTH_COPY[activeTab];
 
   const handleTabChange = (nextTab: string) => {
     const params = new URLSearchParams(searchParams.toString());

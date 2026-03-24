@@ -58,6 +58,21 @@ export const patientsSchema = z.array(patientSchema);
 export type Patient = z.infer<typeof patientSchema>;
 
 /**
+ * Single medication entry within a patient record.
+ */
+export type PatientMedication = z.infer<typeof patientMedicationSchema>;
+
+/**
+ * Multidisciplinary care note attached to a patient.
+ */
+export type PatientCareNote = z.infer<typeof patientCareNoteSchema>;
+
+/**
+ * Timeline milestone in a patient's treatment path.
+ */
+export type PatientVisitEvent = z.infer<typeof patientVisitEventSchema>;
+
+/**
  * Supported visual layouts for the patient roster.
  */
 export type PatientView = "grid" | "list";

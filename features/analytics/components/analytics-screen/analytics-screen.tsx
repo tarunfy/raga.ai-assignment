@@ -18,7 +18,6 @@ import {
 import { EmptyState } from "@/components/common/feedback/empty-state/empty-state";
 import { ErrorState } from "@/components/common/feedback/error-state/error-state";
 import { PageHeader } from "@/components/common/layout/page-header/page-header";
-import { Badge } from "@/components/ui/badge/badge";
 import {
   Card,
   CardContent,
@@ -28,13 +27,9 @@ import {
 } from "@/components/ui/card/card";
 import { getAnalyticsReportQueryOptions } from "@/features/analytics/api/query";
 import { AnalyticsLoading } from "@/features/analytics/components/analytics-loading/analytics-loading";
-
-const pieChartColors = [
-  "var(--color-chart-1)",
-  "var(--color-chart-2)",
-  "var(--color-chart-3)",
-  "var(--color-chart-4)",
-];
+import { AnalyticsSummaryCard } from "@/features/analytics/components/analytics-summary-card/analytics-summary-card";
+import { CaseMixLegendItem } from "@/features/analytics/components/case-mix-legend-item/case-mix-legend-item";
+import { PIE_CHART_COLORS } from "@/features/analytics/constants";
 
 /**
  * Renders the analytics page with deeper operational and capacity insights.
@@ -81,15 +76,7 @@ export const AnalyticsScreen = () => {
       />
       <div className="grid gap-4 lg:grid-cols-3">
         {data.summary.map((card) => (
-          <Card key={card.id}>
-            <CardHeader>
-              <Badge className="w-fit" variant="neutral">
-                {card.label}
-              </Badge>
-              <CardTitle className="text-3xl">{card.value}</CardTitle>
-              <CardDescription>{card.trend}</CardDescription>
-            </CardHeader>
-          </Card>
+          <AnalyticsSummaryCard card={card} key={card.id} />
         ))}
       </div>
       <div className="grid gap-4 xl:grid-cols-[1.35fr_1fr]">
@@ -154,7 +141,7 @@ export const AnalyticsScreen = () => {
                 >
                   {data.caseMix.map((entry, index) => (
                     <Cell
-                      fill={pieChartColors[index % pieChartColors.length]}
+                      fill={PIE_CHART_COLORS[index % PIE_CHART_COLORS.length]}
                       key={entry.name}
                     />
                   ))}
@@ -171,22 +158,11 @@ export const AnalyticsScreen = () => {
             </ResponsiveContainer>
             <div className="mt-4 grid gap-2 sm:grid-cols-2">
               {data.caseMix.map((entry, index) => (
-                <div
-                  className="flex items-center justify-between rounded-none bg-muted/55 px-3 py-2 text-sm"
+                <CaseMixLegendItem
+                  color={PIE_CHART_COLORS[index % PIE_CHART_COLORS.length]}
+                  entry={entry}
                   key={entry.name}
-                >
-                  <div className="flex items-center gap-2">
-                    <span
-                      className="size-2.5 rounded-full"
-                      style={{
-                        backgroundColor:
-                          pieChartColors[index % pieChartColors.length],
-                      }}
-                    />
-                    <span>{entry.name}</span>
-                  </div>
-                  <span className="font-semibold">{entry.value}%</span>
-                </div>
+                />
               ))}
             </div>
           </CardContent>

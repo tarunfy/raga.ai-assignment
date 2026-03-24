@@ -21,23 +21,17 @@ import {
   CardTitle,
 } from "@/components/ui/card/card";
 import { getPatientByIdQueryOptions } from "@/features/patients/api/query";
+import { CareNoteCard } from "@/features/patients/components/care-note-card/care-note-card";
+import { InfoTile } from "@/features/patients/components/info-tile/info-tile";
+import { MedicationCard } from "@/features/patients/components/medication-card/medication-card";
 import { PatientDetailLoading } from "@/features/patients/components/patient-detail-loading/patient-detail-loading";
-import { formatDate, formatDateTime } from "@/lib/utils";
+import { TimelineEventCard } from "@/features/patients/components/timeline-event-card/timeline-event-card";
+import { getRiskVariant } from "@/features/patients/utils";
+import { formatDate } from "@/lib/utils";
 
 interface PatientDetailScreenProps {
   patientId: string;
 }
-
-const getRiskVariant = (riskLevel: "critical" | "high" | "moderate") => {
-  switch (riskLevel) {
-    case "critical":
-      return "critical";
-    case "high":
-      return "warning";
-    default:
-      return "neutral";
-  }
-};
 
 /**
  * Renders the patient details page requested in the assignment.
@@ -164,15 +158,7 @@ export const PatientDetailScreen = ({
           </CardHeader>
           <CardContent className="space-y-3">
             {data.medications.map((medication) => (
-              <div
-                className="rounded-none border border-border/70 bg-muted/55 p-3"
-                key={medication.name}
-              >
-                <p className="font-medium text-foreground">{medication.name}</p>
-                <p className="mt-1 text-muted-foreground text-sm">
-                  {medication.dosage} · {medication.schedule}
-                </p>
-              </div>
+              <MedicationCard key={medication.name} medication={medication} />
             ))}
           </CardContent>
         </Card>
@@ -188,22 +174,7 @@ export const PatientDetailScreen = ({
           </CardHeader>
           <CardContent className="space-y-3">
             {data.careNotes.map((note) => (
-              <div
-                className="rounded-none border border-border/70 bg-background/85 p-3"
-                key={note.id}
-              >
-                <div className="flex items-center justify-between gap-3">
-                  <p className="font-semibold text-foreground text-sm">
-                    {note.author}
-                  </p>
-                  <span className="text-muted-foreground text-xs">
-                    {formatDateTime(note.recordedAt)}
-                  </span>
-                </div>
-                <p className="mt-2 text-muted-foreground text-sm leading-6">
-                  {note.content}
-                </p>
-              </div>
+              <CareNoteCard key={note.id} note={note} />
             ))}
           </CardContent>
         </Card>
@@ -216,17 +187,7 @@ export const PatientDetailScreen = ({
           </CardHeader>
           <CardContent className="space-y-3">
             {data.visitTimeline.map((event) => (
-              <div className="rounded-none bg-muted/55 p-3" key={event.id}>
-                <p className="font-semibold text-foreground text-sm">
-                  {event.title}
-                </p>
-                <p className="mt-1 text-muted-foreground text-sm leading-6">
-                  {event.description}
-                </p>
-                <p className="mt-2 text-muted-foreground text-xs">
-                  {formatDateTime(event.date)}
-                </p>
-              </div>
+              <TimelineEventCard event={event} key={event.id} />
             ))}
           </CardContent>
         </Card>
@@ -234,19 +195,3 @@ export const PatientDetailScreen = ({
     </div>
   );
 };
-
-interface InfoTileProps {
-  label: string;
-  value: string;
-}
-
-const InfoTile = ({ label, value }: InfoTileProps) => (
-  <div className="rounded-none border border-border/70 bg-muted/55 p-4">
-    <p className="font-semibold text-muted-foreground text-xs uppercase tracking-[0.18em]">
-      {label}
-    </p>
-    <p className="mt-2 font-medium text-foreground text-sm leading-6">
-      {value}
-    </p>
-  </div>
-);
