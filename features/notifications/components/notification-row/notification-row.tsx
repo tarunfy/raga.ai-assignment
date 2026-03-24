@@ -1,7 +1,10 @@
 import { Badge } from "@/components/ui/badge/badge";
 import { NOTIFICATION_TONE_LABEL } from "@/features/notifications/constants";
 import type { AppNotification } from "@/features/notifications/types";
-import { getToneBadgeVariant, getToneIcon } from "@/features/notifications/utils";
+import {
+  getToneBadgeVariant,
+  getToneIcon,
+} from "@/features/notifications/utils";
 import { cn, formatRelativeTime } from "@/lib/utils";
 
 interface NotificationRowProps {

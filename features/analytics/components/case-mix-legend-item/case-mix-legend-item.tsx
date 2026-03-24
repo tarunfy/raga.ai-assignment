@@ -8,10 +8,7 @@ interface CaseMixLegendItemProps {
 /**
  * Renders a single legend row beneath the case-mix pie chart.
  */
-export const CaseMixLegendItem = ({
-  color,
-  entry,
-}: CaseMixLegendItemProps) => (
+export const CaseMixLegendItem = ({ color, entry }: CaseMixLegendItemProps) => (
   <div className="flex items-center justify-between rounded-none bg-muted/55 px-3 py-2 text-sm">
     <div className="flex items-center gap-2">
       <span

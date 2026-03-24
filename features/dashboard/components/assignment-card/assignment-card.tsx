@@ -25,9 +25,7 @@ export const AssignmentCard = ({ assignment }: AssignmentCardProps) => (
             {assignment.priority}
           </Badge>
         </div>
-        <p className="font-medium text-primary text-sm">
-          {assignment.program}
-        </p>
+        <p className="font-medium text-primary text-sm">{assignment.program}</p>
         <p className="text-muted-foreground text-sm leading-6">
           {assignment.summary}
         </p>

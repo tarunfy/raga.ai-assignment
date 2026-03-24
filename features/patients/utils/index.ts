@@ -21,9 +21,7 @@ export const getStatusVariant = (riskLevel: Patient["riskLevel"]) => {
  *
  * @param riskLevel - The patient risk classification
  */
-export const getRiskVariant = (
-  riskLevel: "critical" | "high" | "moderate"
-) => {
+export const getRiskVariant = (riskLevel: "critical" | "high" | "moderate") => {
   switch (riskLevel) {
     case "critical":
       return "critical";

@@ -1,7 +1,4 @@
-import {
-  ArrowRightIcon,
-  HeartbeatIcon,
-} from "@phosphor-icons/react";
+import { ArrowRightIcon, HeartbeatIcon } from "@phosphor-icons/react";
 import Link from "next/link";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar/avatar";
 import { Badge } from "@/components/ui/badge/badge";

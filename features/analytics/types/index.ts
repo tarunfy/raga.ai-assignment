@@ -45,7 +45,9 @@ export type AnalyticsReport = z.infer<typeof analyticsReportSchema>;
 /**
  * Single summary KPI card in the analytics overview.
  */
-export type AnalyticsSummaryCardData = z.infer<typeof analyticsSummaryCardSchema>;
+export type AnalyticsSummaryCardData = z.infer<
+  typeof analyticsSummaryCardSchema
+>;
 
 /**
  * Case-mix distribution entry used in the pie chart and legend.
